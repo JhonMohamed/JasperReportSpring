@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.antlr.v4.runtime.misc.NotNull;
 
+import java.time.LocalDate;
+
 
 @Getter
 @Setter
@@ -19,12 +21,19 @@ public class Empresary {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotNull
-    private String name;
+    private String fechaOperacion;
+    @NotNull
+    private String producto;
+    @NotNull
+    private String tipoTransaccion;
     @NotNull
     private Integer cantidad;
     @NotNull
-    private Double precio;
+    private String descripcion;
     @NotNull
-    private Boolean disponible;
-
+    private String usuario;
+    @NotNull
+    private String fechaVencimiento;
+    @NotNull
+    private String proveedor;
 }
